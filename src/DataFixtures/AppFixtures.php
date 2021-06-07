@@ -16,6 +16,7 @@ class AppFixtures extends Fixture
             $onePost = new Post();
             $onePost->setTitle($faker->word());
             $onePost->setDescription($faker->text(255));
+            $onePost->getUrlImage("");
             $manager->persist($onePost);
         }
         $manager->flush();
