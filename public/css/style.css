@@ -1,0 +1,44 @@
+body {
+
+    background-color: black;
+    background-image: url(../images/darkness.png);
+    min-height: 100vh;
+ 
+html {
+    position: relative;
+    min-height: 100%;
+}
+nav {
+    background-color: #000;
+    border-bottom: 3px solid #96a702;
+    border-top: 3px solid #96a702;
+}
+footer { 
+    background-color: #000!important;
+    border-top: 3px solid #96a702;
+    border-bottom: 3px solid #96a702;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.userName {
+margin-left: 20px;
+margin-right: 20px;
+padding-top: 5px;
+color:#96a702;
+
+}
+
+.width-card-img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+a:hover {
+    color: #96a702;
+}
+
+.carousel-caption {
+    top: 50%;
+}

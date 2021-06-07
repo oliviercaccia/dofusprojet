@@ -12,11 +12,11 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $faker = Factory::create('fr_FR');
-        for ($i = 0; $i < 40; $i++) {
+        for ($i = 0; $i < 4; $i++) {
             $onePost = new Post();
             $onePost->setTitle($faker->word());
             $onePost->setDescription($faker->text(255));
-            $onePost->getUrlImage("");
+            $onePost->setUrlImage($faker->imageUrl(250, 250, "cats"));
             $manager->persist($onePost);
         }
         $manager->flush();
