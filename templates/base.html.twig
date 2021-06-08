@@ -22,9 +22,9 @@
         {% block nav %}
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand">Shared_Dofus</a>
+                    <a href="{{ path('home') }}" class="navbar-brand">Shared_Dofus</a>
                             <form class="d-flex" action="/" id="" method="GET">
-                    <input class="form-control me-2" name="search" type="search" id="search" placeholder="Rechercher" aria-label="Search">
+                    <input class="form-control me-2" name="search" type="search" id="search"  placeholder="Rechercher" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Rechercher</button>
                 </form>
                 </div>
@@ -35,7 +35,7 @@
         {% block body %}{% endblock %}
 {% block footer %}
 
-    <footer class=" text-white  ">
+    <footer class=" bg-dark text-white  ">
     <div class="container">
         <div class="row d-flex justify-content-between">
             <div class="col-9 ">

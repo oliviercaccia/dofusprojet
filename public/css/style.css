@@ -3,7 +3,7 @@ body {
     background-color: black;
     background-image: url(../images/darkness.png);
     min-height: 100vh;
- 
+}
 html {
     position: relative;
     min-height: 100%;
