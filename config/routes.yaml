@@ -1,3 +1,21 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+homepage:
+  path: /
+  controller: App\Controller\HomeController:index
+display:
+  path: /index
+  controller: App\Controller\HomeController:index
+login:
+  path: /login
+  controller: App\Controller\AuthController:login
+logout:
+  path: /logout
+  controller: App\Controller\AuthController:logout
+register:
+  path: /register
+  controller: App\Controller\AuthController:register
+create:
+  path: /new
+  controller: App\Controller\ContentController:create
