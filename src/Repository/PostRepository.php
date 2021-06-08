@@ -18,6 +18,15 @@ class PostRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Post::class);
     }
+    public function search($value)
+    {
+        $valueWithPercent = "%$value%";
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.content like :val')
+            ->setParameter('val', $valueWithPercent)
+            ->getQuery()
+            ->getResult();
+    }
 
     // /**
     //  * @return Post[] Returns an array of Post objects

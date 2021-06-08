@@ -20,15 +20,42 @@
     <body>
 
         {% block nav %}
-            <nav class="navbar navbar-light bg-light">
-                <div class="container-fluid">
-                    <a href="{{ path('home') }}" class="navbar-brand">Shared_Dofus</a>
-                            <form class="d-flex" action="/" id="" method="GET">
-                    <input class="form-control me-2" name="search" type="search" id="search"  placeholder="Rechercher" aria-label="Search">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+        
+            <a class="navbar-brand" href="{{ path('home') }}">Dofus_Skin</a>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    {% if is_granted('ROLE_USER') %}
+                    <a href="" class=" btn btn-outline-success" role="button" aria-pressed="true" id="signup-btn">Nouveau Post</a>
+
+                    {% endif %}
+                    <div class="">
+                    </div>
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <h4 class="userName "> <i class="far fa-user"></i>{{ app.user.username }}</h4>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{ path('app_logout') }}" id="logout-btn" role="button">Se déconnecter</a>
+                    </li>
+
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{ path('app_login') }}" id="login-btn" role="button">Se connecter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{{ path('app_register') }}" id="signup-btn" role="button">S'inscrire</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <form class="d-flex" action="/" id="" method="GET">
+                    <input class="form-control me-2" name="search" type="search" id="search" placeholder="Rechercher" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Rechercher</button>
                 </form>
-                </div>
-            </nav>
+            </div>
+        </div>
+    </nav>
         {% endblock %}
 
         {% block header %}{% endblock %}
