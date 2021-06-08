@@ -16,15 +16,15 @@ class HomeController extends AbstractController
      */
     public function index(PostRepository $PostRepo, $search = ""): Response
     {
-        $Posts = [];
+        $posts = [];
         if (!empty($search)) {
-            $Posts = $PostRepo->customSearch($search);
+            $posts = $PostRepo->customSearch($search);
         } else {
-            $Posts = $PostRepo->findAll();
+            $posts = $PostRepo->findAll();
         }
 
         return $this->render('home/index.html.twig', [
-            "Posts" => $Posts
+            "posts" => $posts
         ]);
     }
 }
