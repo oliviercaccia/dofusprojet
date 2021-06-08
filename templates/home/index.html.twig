@@ -55,6 +55,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ onePost.title }}</h5>
                                 <p class="card-text">{{ onePost.description }}</p>
+                                <p class="card-text"><small class="text-muted">Publier par : {{ onePost.author.nickname }} </small></p>
                                 <p class="card-text"><small class="text-muted">Posté le {{ "now"|date("d/m/Y") }} </small></p>
                             </div>
                         </div>
